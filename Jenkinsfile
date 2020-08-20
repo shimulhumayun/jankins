@@ -26,7 +26,9 @@ pipeline {
 		}
 
 		stage("Test"){
-			sh "mvn test"
+			steps {
+					sh "mvn test"
+			}
 		}
 		stage("Intergration test"){
 			steps {
@@ -34,12 +36,6 @@ pipeline {
 			}
 		}
 
-		stage("Test") {
-			steps {
-				echo "Test"
-
-			}
-		}
 		stage("Intergration") {
 			steps {
 				echo "Intergration"
