@@ -6,9 +6,21 @@ pipeline {
 		stage('Build') {
 			steps {
 				echo "Build"
+steps added			}
+		}
+
+		stage("Test") {
+			steps {
 				echo "Test"
+
 			}
 		}
+		stage("Intergration") {
+			steps {
+				echo "Intergration"
+			}
+		}
+
 	}
 
 }
