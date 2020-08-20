@@ -1,15 +1,16 @@
 //DECLARATIVE 
 pipeline {
-	//agent any
-	agent {
+	agent any
+/* 	agent {
 		docker { 
 			image 'maven:3.6.3'
-			}}
+			}} */
 	stages {
 		stage('Build') {
 			steps {
 				echo "Build"
-					sh 'mvn --version '
+				echo "$PATH"
+				echo "$env.BUILD_NUMBER"
 						}
 		}
 
